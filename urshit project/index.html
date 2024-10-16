@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS PROJECT</title>
+</head>
+
+<style>
+    body {
+        background-color: rgb(34, 78, 34);
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <img src="https://marshallsarsenal.com/cdn/shop/products/StandardMK2Grenade_af9fe376-6c46-4ac5-94f6-a470f7dab310_2048x.jpg?v=1609506115"
+            alt="grenade" height="700px" width="50%" onclick="playone()">
+    </div>
+
+    <audio id="audio1" src="./music/hq-explosion-6288 (1).mp3"></audio> <!-- Added id here -->
+
+    <script>
+        function playone() {
+            document.getElementById("audio1").play();
+        }
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "a" || event.key === "A") {
+                let audio1 = document.getElementById('audio1'); // Corrected here
+                audio1.play();
+            }
+        });
+    </script>
+</body>
+
+</html>
